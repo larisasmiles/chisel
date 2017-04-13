@@ -14,7 +14,7 @@ class ParagraphTest < Minitest::Test
   end
   
   def test_mulitple_lines_without_new_line_character
-    p = Paragraph.new("You just have to try the cheesecake, he said. Ever since it appeared in Food & Wine this place has been packed every night.")
+    p = Paragraph.new("You just have to try the cheesecake, he said." "\n" "Ever since it appeared in Food & Wine this place has been packed every night.")
     assert_equal "<p>You just have to try the cheesecake, he said. Ever since it appeared in Food & Wine this place has been packed every night.</p>", p.html_format
   end
 

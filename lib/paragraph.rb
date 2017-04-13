@@ -1,3 +1,4 @@
+require "pry-state"
 class Paragraph
   attr_reader :text, :html_format
 
@@ -8,8 +9,10 @@ class Paragraph
 
   def paragraph_markdown
     if text.include?("\n")
+       text.split("\n")
       middle_text = text.strip
       "<p>\n#{middle_text}\n</p>\n"
+      binding.pry
     else
       middle_text = text.strip
       "<p>#{middle_text}</p>"

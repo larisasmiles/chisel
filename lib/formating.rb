@@ -1,5 +1,0 @@
-class Format
-
-  bold
-  italics 
-  
