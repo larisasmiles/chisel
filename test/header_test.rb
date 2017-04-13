@@ -37,8 +37,10 @@ class HeaderTest < Minitest::Test
   end
   
   def test_test_if_header_format_works_with_html_characters
-    
-  
+    h = Header.new("###My <em>Life</em> in <strong>Desserts</strong>")
+    output = h.header_format(h.text)
+    assert_equal "<h3>My <em>Life</em> in <strong>Desserts</strong></h3>\n", output
+  end
 
   
 
