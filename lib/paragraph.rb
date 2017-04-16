@@ -12,7 +12,6 @@ class Paragraph
        text.split("\n")
       middle_text = text.strip
       "<p>\n#{middle_text}\n</p>\n"
-      binding.pry
     else
       middle_text = text.strip
       "<p>#{middle_text}</p>"
